@@ -1,2 +1,16 @@
+h1{
+    text-align: center;
+}
 
+.container{
+    display: flex;
+    justify-content: flex-start;
+    gap: 100px;
+}
+
+.collage-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
 
