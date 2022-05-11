@@ -1,16 +1,86 @@
-h1{
-    text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=KoHo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy&family=KoHo&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #e5e5e5;
 }
 
 .container{
     display: flex;
-    justify-content: flex-start;
-    gap: 100px;
+    width:100%;
+    max-width: 890px;
+    flex-wrap: wrap;
+    align-self: center;
 }
 
-.collage-container {
+h1{
+    text-align: center;
+    flex-basis: content;
+    font-family: 'KoHo', sans-serif;
+    color: #454545;
+}
+
+.gallery{
+    background-color: #fff;
+    padding: 18px 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 25px 5px rgba(0, 0, 0, 1);
     display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 10px;
+    justify-content: space-evenly;
+    grid-template-columns: 1fr 1fr 1fr;
+    
 }
 
+.item1{
+    width: 332px;
+    height: 224px;
+}
+.item2{
+    width: 305px;
+    height: 226px;
+}
+.item3{
+    width: 226px;
+    height: 293px;
+}
+.item4{
+    width: 305px;
+    height: 226px;
+}
+.item5{
+    width: 332px;
+    height: 224px;
+}
+.item6{
+    width: 226px;
+    height: 175px;
+}
+input[type=file]{
+    width: 100%;
+    background-color: #fff;
+    height: 40px;
+    border: 1px solid #c7c7c7;
+    border-radius: 10px;
+    box-shadow: 0px 4px 25px 5px rgba(0, 0, 0, 1);
+    font-family: 'Kantumruy', sans-serif;
+    text-transform: uppercase;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+input[type=file]::file-selector-button{
+    height: 100%;
+    border: none;
+    padding: 0 45px;
+    background-color: #E9EEF1;
+    border-right: 1px solid #c7c7c7;
+    font-family: 'Kantumruy', sans-serif;
+    text-transform: uppercase;
+}
