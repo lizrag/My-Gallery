@@ -27,41 +27,41 @@ h1{
     color: #454545;
 }
 
-.gallery{
+.gallery {
     background-color: #fff;
     padding: 18px 30px;
     border-radius: 15px;
     box-shadow: 0px 4px 25px 5px rgba(0, 0, 0, 1);
-    display: grid;
-    justify-content: space-evenly;
-    grid-template-columns: 1fr 1fr 1fr;
-    
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px;
 }
 
-.item1{
-    width: 332px;
-    height: 224px;
+.gallery-column {
+    flex: 33.3%;
+    max-width: 33.3%;
+    padding: 0 4px;
 }
-.item2{
-    width: 305px;
-    height: 226px;
+
+.gallery-column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
 }
-.item3{
-    width: 226px;
-    height: 293px;
+
+form{
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
-.item4{
-    width: 305px;
-    height: 226px;
+
+form button{
+    width: 125px;
+    height: fit-content;
+    padding: 15px;
+    border-radius: 10px;
 }
-.item5{
-    width: 332px;
-    height: 224px;
-}
-.item6{
-    width: 226px;
-    height: 175px;
-}
+
 input[type=file]{
     width: 100%;
     background-color: #fff;

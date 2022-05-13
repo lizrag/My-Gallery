@@ -10,27 +10,24 @@
 <body>
     <h1>My Gallery</h1>
     <div class="container">
-        <input type="file" name="" id="">
+        <form action="/photos/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="photos" id="">
+        <button type="submit">Upload</button>
+        </form>
     </div>
     <main class="gallery container">
-        <div class="item1">
-            <img src="https://picsum.photos/332/224">
-        </div>
-        <div class="item2">
+        <div class="gallery-column">
+            <img src="https://picsum.photos/332/224">     
             <img src="https://picsum.photos/305/226">
         </div>
-        <div class="item3">
+        <div class="gallery-column">
             <img src="https://picsum.photos/226/293">
-        </div>
-        <div class="item4">
             <img src="https://picsum.photos/305/226">
         </div>
-        <div class="item5">
+        <div class="gallery-column">
             <img src="https://picsum.photos/332/224">
-        </div>
-        <div class="item6">
             <img src="https://picsum.photos/226/175">
-        </div>     
+        </div>
     </main>
 </body>
 </html>
