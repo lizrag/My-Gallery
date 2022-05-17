@@ -10,7 +10,7 @@
 <body>
     <h1>My Gallery</h1>
     <div class="container">
-        <form action="/photos/upload" method="post" enctype="multipart/form-data">
+        <form action="/photos/upload" method="post" enctype="multipart/form-data" name="formphoto">
             <input type="file" name="photos" id="">
         <button type="submit">Upload</button>
         </form>
@@ -29,5 +29,15 @@
             <img src="https://picsum.photos/226/175">
         </div>
     </main>
+<script>
+    function form (){
+        let photo = document.forms['formphoto']['photos'];
+        let formphoto = "";
+        formphoto.forEach(photo => {
+            document.getElementsByClassName('gallery container').innerHTML = photo;
+        });
+
+    }
+</script>
 </body>
 </html>
