@@ -12,17 +12,27 @@ const storage = multer.diskStorage({
     },
   });
   
-const upload = multer({ storage: storage })
+const upload = multer({ storage: storage,
+    fileFilter: (req, file, cb) => {
+    if (file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg") {
+      cb(null, true);
+    } else {
+      cb(null, false);
+      return cb(new Error('Only .png, .jpg and .jpeg format allowed!'));
+    }
+  }
+})
 const apiRoutes = Router();
 
 apiRoutes.post('/photos/upload', upload.array('photos', 6), function (req, res) {
   
   try{
     //validación
-    return res.redirect('/?sucess=true');
+      return res.redirect('/?sucess=true');
+    
   }catch (error){
-    console.log(error);
-    return res.redirect('/?sucess=false');
+      return res.redirect('/?sucess=false');
+    
   }
 });
 
