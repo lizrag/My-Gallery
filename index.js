@@ -3,6 +3,8 @@ import publicRoutes from './routes/public.routes.js';
 import apiRoutes from "./routes/api.routes.js";
 
 const app = express();
+
+
 const PORT = 8080;
 
 app.use(express.static('public'));
